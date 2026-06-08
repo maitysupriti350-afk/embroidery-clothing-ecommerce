@@ -1,0 +1,406 @@
+:root {
+    --bg: #fff0f6;
+    --surface: #ffffff;
+    --surface-soft: #ffe4f0;
+    --surface-muted: #fff5fb;
+    --text: #3d1729;
+    --text-muted: #6b3a53;
+    --primary: #ff8fb8;
+    --primary-dark: #ff5da3;
+    --primary-soft: #ffd3e8;
+    --border: #f8d0e0;
+    --nav-bg: #fff5f9;
+    --footer-bg: #ffd9e6;
+    --hover: #ffb2d3;
+}
+
+/* CRITICAL: Force mobile layout to work */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+}
+
+* {
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+}
+
+/* Global Mobile Styles */
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mobile Navigation */
+.global-nav {
+    width: 100%;
+    padding: 18px 24px;
+    background: var(--nav-bg);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.global-nav a {
+    color: var(--text);
+    text-decoration: none;
+    margin-right: 16px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.global-nav a:hover {
+    color: var(--primary-dark);
+    background: var(--surface-soft);
+}
+
+.global-nav .nav-left,
+.global-nav .nav-right {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.global-nav .brand {
+    font-weight: 700;
+    color: #7c2241;
+    margin-right: 20px;
+    font-size: 1.2rem;
+}
+
+.global-nav .user-label {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.global-nav .admin-switch-btn {
+    background: var(--primary-dark);
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin-right: 8px;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.global-nav .admin-switch-btn:hover {
+    background: #ff93c5 !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 93, 163, 0.3);
+}
+
+.global-nav .admin-switch-btn i {
+    margin-right: 4px;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--text);
+    cursor: pointer;
+    padding: 8px;
+}
+
+.global-footer {
+    width: 100%;
+    padding: 20px 24px;
+    background: var(--footer-bg);
+    color: #4f1b39;
+    text-align: center;
+    font-size: 0.95rem;
+    border-top: 1px solid #f7c6dc;
+    margin-top: 40px;
+}
+
+.global-footer a {
+    color: #7c2241;
+    text-decoration: underline;
+}
+
+/* Responsive table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .global-nav {
+        padding: 12px 16px;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .global-nav .nav-right {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--nav-bg);
+        padding: 16px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+    
+    .global-nav .nav-right.active {
+        display: flex;
+    }
+    
+    .global-nav a {
+        margin-right: 0;
+        margin-bottom: 8px;
+        font-size: 14px;
+        padding: 12px 16px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .global-nav .brand {
+        font-size: 1rem;
+        margin-right: 12px;
+    }
+    
+    /* Responsive Tables */
+    table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    table thead {
+        display: none;
+    }
+    
+    table tbody tr {
+        display: block;
+        margin-bottom: 16px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 16px;
+        background: var(--surface);
+    }
+    
+    table tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border);
+    }
+    
+    table tbody td:last-child {
+        border-bottom: none;
+    }
+    
+    table tbody td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--text-muted);
+        margin-right: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .global-nav {
+        padding: 10px 12px;
+    }
+    
+    .global-nav .brand {
+        font-size: 0.9rem;
+    }
+    
+    .global-nav .admin-switch-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .global-footer {
+        padding: 16px 12px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Form Mobile Styles */
+@media (max-width: 768px) {
+    form {
+        padding: 16px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="tel"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 14px 16px;
+        font-size: 16px; /* Prevents zoom on iOS */
+        border: 2px solid var(--border);
+        border-radius: 12px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+    
+    button,
+    input[type="submit"],
+    input[type="button"] {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 16px;
+        border-radius: 12px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    button:active,
+    input[type="submit"]:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Card Mobile Styles */
+@media (max-width: 768px) {
+    .card,
+    .product-card,
+    .section-card {
+        margin: 12px;
+        padding: 16px;
+        border-radius: 16px;
+    }
+    
+    .grid {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Button Mobile Styles */
+@media (max-width: 768px) {
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 24px;
+        font-size: 16px;
+        border-radius: 12px;
+        min-height: 48px; /* Minimum touch target */
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    
+    .btn-sm {
+        padding: 10px 16px;
+        font-size: 14px;
+        min-height: 40px;
+    }
+}
+
+/* Image Mobile Styles */
+@media (max-width: 768px) {
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+    
+    .product-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+/* Modal Mobile Styles */
+@media (max-width: 768px) {
+    .modal {
+        padding: 16px;
+    }
+    
+    .modal-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        border-radius: 20px;
+        padding: 24px;
+    }
+    
+    .modal-header {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .modal-body {
+        padding: 16px;
+    }
+}
+
+/* Alert/Message Mobile Styles */
+@media (max-width: 768px) {
+    .alert,
+    .message,
+    .msg-bar {
+        margin: 12px;
+        padding: 16px;
+        border-radius: 12px;
+        font-size: 14px;
+    }
+}
+
+/* Pagination Mobile Styles */
+@media (max-width: 768px) {
+    .pagination {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 16px;
+    }
+    
+    .pagination a,
+    .pagination button {
+        padding: 10px 16px;
+        font-size: 14px;
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+

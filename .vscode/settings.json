@@ -1,0 +1,9 @@
+{
+  "java.project.sourcePaths": [
+    "src/main/java"
+  ],
+  "java.project.referencedLibraries": [
+    "src/main/webapp/WEB-INF/lib/*.jar"
+  ],
+  "java.configuration.updateBuildConfiguration": "interactive"
+}

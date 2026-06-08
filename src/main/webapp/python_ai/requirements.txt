@@ -1,0 +1,17 @@
+# Python Dependencies for AI Try-On Engine
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+opencv-python==4.8.1.78
+numpy==1.24.3
+
+# MediaPipe for pose detection (optional but recommended for advanced features)
+# Install with: pip install mediapipe
+# Or uncomment below:
+# mediapipe==0.10.1
+
+# Additional optional libraries for future enhancements
+# pillow==10.0.0  # For additional image processing
+# scikit-image==0.21.0  # For advanced image analysis
+# scipy==1.11.2  # For scientific computing
+requests==2.31.0

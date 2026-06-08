@@ -1,0 +1,14 @@
+@echo off
+REM Example setenv.bat for Tomcat (place this file at %CATALINA_HOME%\bin\setenv.bat)
+REM Replace the placeholder values below with your actual tokens before restarting Tomcat.
+
+REM Hugging Face API token
+set "HF_API_TOKEN=hf_your_token_here"
+
+REM Recommended model for inpainting (change as needed)
+set "HF_MODEL=stabilityai/stable-diffusion-2-inpainting"
+
+REM Optional: other app-specific environment variables
+REM set "OTHER_SECRET=secret_value"
+
+echo setenv.bat loaded: HF_API_TOKEN set=%HF_API_TOKEN:~0,6%***

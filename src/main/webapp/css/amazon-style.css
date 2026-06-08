@@ -1,0 +1,116 @@
+/* Amazon-inspired style overrides for index.jsp */
+:root{
+  /* Generic variables (default = Amazon-like) */
+  --brand-primary: #ff9900; /* CTA */
+  --brand-dark: #131921;   /* text / header */
+  --muted: #f3f4f6;
+  --accent: #146eb4;
+  --bg: #ffffff;
+  --hero-bg-start: #7c2241;
+  --hero-bg-end: #5b1028;
+}
+/* Theme presets */
+.theme-amazon{ --brand-primary:#ff9900; --brand-dark:#131921; --accent:#146eb4; --hero-bg-start:#7c2241; --hero-bg-end:#5b1028; }
+.theme-flipkart{ --brand-primary:#0b79f7; --brand-dark:#1a237e; --accent:#ffd54f; --hero-bg-start:#082b57; --hero-bg-end:#0b79f7; }
+.theme-nykaa{ --brand-primary:#ff2d55; --brand-dark:#2b0b1a; --accent:#ff9fb2; --hero-bg-start:#ff6b8a; --hero-bg-end:#ff2d55; }
+.theme-myntra{ --brand-primary:#ff3f6c; --brand-dark:#1f1236; --accent:#ffd166; --hero-bg-start:#4b1f5a; --hero-bg-end:#ff3f6c; }
+
+body{background:var(--bg);color:var(--brand-dark);font-family:Inter,Segoe UI,Arial,sans-serif}
+/* Prominent top search */
+.mega-search{display:flex;align-items:center;gap:12px;padding:12px 20px;background:var(--brand-dark);color:#fff;position:sticky;top:0;z-index:2000}
+:root{
+  /* Site palette mapped to the Gilded Stitch theme */
+  --brand-primary: #c99a4a; /* accent gold */
+  --brand-dark: #6b0b2a;   /* burgundy / primary text */
+  --muted: #6b3a53;        /* muted text */
+  --accent: #6b0b2a;       /* deep accent (burgundy) */
+  --bg: #fbf6f6;           /* page background (off-white) */
+  --card: #fff6f6;         /* card background */
+  --shadow: rgba(11,10,10,0.08);
+  --hero-bg-start: #f4ecec;
+  --hero-bg-end: #fbf6f6;
+.mega-search select{border-radius:4px;padding:10px;border:none}
+.search-form input{padding:14px 16px;border-radius:6px;border:1px solid #ddd;font-size:16px}
+body{background:linear-gradient(180deg,var(--hero-bg-start),var(--hero-bg-end));color:var(--brand-dark);font-family:Inter,Segoe UI,Arial,sans-serif}
+.search-btn{background:var(--brand-primary);color:#111;border-radius:6px;padding:12px 16px;font-weight:700}
+.hero-section{background:linear-gradient(180deg,var(--hero-bg-start),var(--hero-bg-end));padding:36px 0}
+/* Hero */
+.deal-card{min-width:220px;border-radius:6px;padding:10px;display:flex;gap:10px;align-items:center;background:var(--card);border:1px solid rgba(11,10,10,0.04)}
+.hero-section{background:linear-gradient(90deg,#fff 0%,#fff 100%);padding:36px 0}
+.product-card{border:1px solid rgba(11,10,10,0.04);border-radius:8px;overflow:hidden;background:linear-gradient(180deg,var(--card),#fffaf8);display:flex;flex-direction:column;height:100%}
+.hero-content{display:flex;align-items:center;justify-content:space-between;gap:30px;max-width:1200px;margin:0 auto;padding:0 20px}
+.cta-btn.secondary{background:var(--card);border:1px solid rgba(177,54,101,0.08)}
+.hero-text h1{color:var(--brand-dark);font-size:2.6rem}
+.wishlist-btn{background:var(--card);border:1px solid rgba(11,10,10,0.04)}
+.cta-btn.primary{background:var(--brand-primary);color:#111}
+.carousel-card{background:linear-gradient(180deg,var(--card),rgba(255,250,248,0.95));padding:28px;border-radius:10px;max-width:520px;pointer-events:auto;box-shadow:0 20px 50px rgba(16,24,40,0.08)}
+.cta-btn.secondary{background:#fff;border:1px solid #e6e6e6}
+.promo-bar{background:linear-gradient(90deg,var(--accent),#b13665);color:#fff;padding:8px 0;text-align:center;font-weight:700}
+/* Deals strip */
+.mega-menu{position:absolute;left:0;top:100%;background:var(--card);border-radius:6px;padding:18px;box-shadow:0 18px 40px rgba(0,0,0,0.06);display:none;min-width:760px}
+.deals-strip{display:flex;gap:12px;padding:12px 20px;overflow:auto;background:linear-gradient(90deg,#fff8f0,#fff)}
+.deal-card{min-width:220px;border-radius:6px;padding:10px;display:flex;gap:10px;align-items:center;background:#fff;border:1px solid #eee}
+/* Category badges */
+.category-card{cursor:pointer}
+.category-image{height:160px}
+/* Products grid */
+.container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;padding:24px 20px}
+.product-card{border:1px solid #eee;border-radius:8px;overflow:hidden;background:#fff;display:flex;flex-direction:column;height:100%}
+.product-image{flex:0 0 260px;overflow:hidden;display:block}
+.product-image img{width:100%;height:100%;object-fit:cover;display:block}
+.product-content{padding:12px;display:flex;flex-direction:column;gap:8px;flex:1}
+.product-title{font-size:1rem;font-weight:600;color:#111}
+.product-category{font-size:0.8rem;color:#6b7280;text-transform:uppercase}
+.product-actions{margin-top:auto;display:flex;gap:8px;align-items:center}
+.product-price{color:var(--brand-primary);font-weight:800}
+.action-btn{border-radius:6px}
+.cart-btn{background:linear-gradient(90deg,#ff9900,#ff7a00);color:#111}
+.wishlist-btn{background:#fff;border:1px solid #eee}
+/* Responsive tweaks */
+@media(max-width:768px){.hero-content{flex-direction:column;text-align:center}.mega-search{flex-direction:column;align-items:stretch}}
+/* Subtle utility classes */
+.container-centered{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* Accessibility: focus states */
+a:focus,button:focus,input:focus{outline:3px solid rgba(20,110,180,0.15);outline-offset:2px}
+
+/* Full-width hero carousel */
+.hero-carousel{position:relative;width:100%;overflow:hidden;background:#fff}
+.carousel-track{display:flex;transition:transform 0.6s ease;width:100%}
+.carousel-slide{min-width:100%;position:relative;display:flex;align-items:center;justify-content:center}
+.carousel-slide img{width:100%;height:520px;object-fit:cover;filter:contrast(1.02);} 
+.carousel-overlay{position:absolute;left:0;top:0;right:0;bottom:0;display:flex;align-items:center;justify-content:flex-start;padding-left:8%;pointer-events:none}
+.carousel-card{background:rgba(255,255,255,0.92);padding:28px;border-radius:10px;max-width:520px;pointer-events:auto;box-shadow:0 20px 50px rgba(16,24,40,0.15)}
+.carousel-title{font-size:2.1rem;font-weight:800;margin-bottom:10px;color:var(--brand-dark)}
+.carousel-sub{color:#6b7280;margin-bottom:18px}
+.carousel-cta{display:inline-flex;gap:10px}
+.btn-primary{background:var(--brand-primary);color:#111;padding:12px 18px;border-radius:6px;font-weight:700;text-decoration:none}
+.btn-secondary{background:#fff;border:1px solid #e5e7eb;padding:12px 16px;border-radius:6px;color:#111;text-decoration:none}
+.carousel-nav-btn{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:rgba(0,0,0,0.45);color:#fff;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.carousel-nav-btn.left{left:14px}
+.carousel-nav-btn.right{right:14px}
+.carousel-indicators{position:absolute;left:50%;transform:translateX(-50%);bottom:18px;display:flex;gap:8px}
+.indicator{width:10px;height:10px;border-radius:999px;background:rgba(255,255,255,0.6);border:1px solid rgba(0,0,0,0.08);cursor:pointer}
+.indicator.active{background:var(--brand-primary);width:14px;height:14px}
+
+@media(max-width:768px){.carousel-overlay{justify-content:center;padding:20px}.carousel-card{max-width:92%;padding:20px}.carousel-slide img{height:360px}}
+/* Ensure hero and product images scale without distortion */
+.hero-image img{max-width:100%;height:auto;object-fit:cover}
+.product-card .product-image img{height:100%;}
+.horizontal-carousel .product-card .product-image img{height:100%;}
+
+/* Top promo bar */
+.promo-bar{background:#146eb4;color:#fff;padding:8px 0;text-align:center;font-weight:700}
+.promo-bar a{color:#fff;text-decoration:underline;margin-left:6px}
+
+/* Global nav tweaks */
+.nav-bar .brand{font-size:1.25rem}
+
+/* Mega menu */
+.products-wrap{position:relative}
+.mega-menu{position:absolute;left:0;top:100%;background:#fff;border-radius:6px;padding:18px;box-shadow:0 18px 40px rgba(0,0,0,0.12);display:none;min-width:760px}
+.mega-column{width:33%;float:left;padding:8px}
+.mega-column h4{font-size:0.95rem;margin-bottom:8px;color:var(--brand-dark)}
+.mega-menu a{display:block;padding:6px 6px;color:#374151;text-decoration:none}
+.products-wrap:hover .mega-menu{display:block}
+.mega-menu:after{content:'';display:block;clear:both}
