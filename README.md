@@ -17,6 +17,9 @@ Full Stack E-Commerce Website built using:
 * Admin Dashboard
 * Product Management
 * Order Management
+* wishlist
+* Add to Cart
+* order tracking 
 
 ## Author
 
